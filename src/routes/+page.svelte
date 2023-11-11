@@ -119,7 +119,7 @@
 	});
 
 	import { base } from '$app/paths';
-	export const prerender = true;
+
 </script>
 
 <section>
@@ -138,7 +138,7 @@
 				>
 					<p class="text-xl italic">"Tokens, but this time inside an NFT" - @CryptoNines</p>
 					<img
-						src="{base + '/'}{authors[0].imageUrl}"
+						src="{authors[0].imageUrl}"
 						alt={`Profile of ${authors[0].name}`}
 						class="w-12 h-12 rounded-full"
 					/>

@@ -10,7 +10,7 @@ const config = {
 	preprocess: [vitePreprocess()],
 
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({ fallback: 'index.html', precompress: false }),
 
 		paths: {
 			base: '/client'

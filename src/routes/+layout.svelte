@@ -8,7 +8,6 @@
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 
 	export const prerender = true;
-	export const trailingSlash = 'always';
 </script>
 
 <!-- App Shell -->
