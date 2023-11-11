@@ -126,7 +126,7 @@
 	<div class="flex items-center justify-center lg:h-screen">
 		<div class="grid grid-cols-1 md:grid-cols-3 text-center p-4 rounded-lg">
 			<div class="col-span-1 animate-fade-left animate-duration-[2345ms]">
-				<img src="{base + '/'}eth-diamond-rainbow.svg" class="w-64 mx-auto" alt="ETH Logo" />
+				<!-- <img src="{base + '/'}eth-diamond-rainbow.svg" class="w-64 mx-auto" alt="ETH Logo" /> -->
 			</div>
 
 			<div class="col-span-1 md:col-span-2 text-center justify-center">
@@ -137,11 +137,11 @@
 					class="flex gap-2 items-center justify-center mb-8 animate-fade-right animate-duration-[2345ms] animate-delay-[500ms]"
 				>
 					<p class="text-xl italic">"Tokens, but this time inside an NFT" - @CryptoNines</p>
-					<!-- <img
+					<img
 						src="{authors[0].imageUrl}"
 						alt={`Profile of ${authors[0].name}`}
 						class="w-12 h-12 rounded-full"
-					/> -->
+					/>
 				</div>
 
 				<div class="grid grid-cols-1 lg:grid-cols-3 gap-10 my-20 mx-20">

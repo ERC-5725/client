@@ -13,7 +13,7 @@ const config = {
 		adapter: adapter({ fallback: 'index.html', precompress: false }),
 
 		paths: {
-			base: '/client'
+			base: '/erc-5725.github.io/client'
 		}
 	}
 };
