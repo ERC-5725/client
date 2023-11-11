@@ -13,7 +13,7 @@ const config = {
 		adapter: adapter(),
 
 		paths: {
-			assets?: '' | `http://${string}` | `https://${string}`;
+			assets: '' | `http://${string}` | `https://${string}`,
 			base: process.env.NODE_ENV === 'production' ? '/client' : ''
 		}
 	}
