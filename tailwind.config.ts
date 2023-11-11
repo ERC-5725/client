@@ -16,6 +16,7 @@ export default {
 	plugins: [
 		forms,
 		typography,
+		require('tailwindcss-animated'),
 		skeleton({
 			themes: {
 				preset: [

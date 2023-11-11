@@ -22,7 +22,7 @@
 				</a> -->
 				<a
 					class="btn btn-sm variant-ghost-surface"
-					href="https://eips.ethereum.org/EIPS/eip-5725"
+					href="https://eips.ethereum.org/assets/eip-5725/"
 					target="_blank"
 					rel="noreferrer"
 				>
