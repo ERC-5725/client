@@ -2,6 +2,8 @@ import adapter from '@sveltejs/adapter-static';
 
 import { vitePreprocess } from '@sveltejs/kit/vite';
 
+const dev = process.env.NODE_ENV === 'development';
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	extensions: ['.svelte'],
@@ -10,10 +12,15 @@ const config = {
 	preprocess: [vitePreprocess()],
 
 	kit: {
-		adapter: adapter({ fallback: 'index.html', precompress: false }),
+		adapter: adapter({
+			pages: 'build',
+			assets: 'build',
+			fallback: null,
+			precompress: false
+		}),
 
 		paths: {
-			base: '/erc-5725.github.io/client'
+			base: dev ? '' : '/client'
 		}
 	}
 };
