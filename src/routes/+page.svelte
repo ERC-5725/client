@@ -20,7 +20,7 @@
 		{
 			title: "A Beginner's Guide to EIP-5725: Transferable Vesting NFTs",
 			newsOrg: 'thedefiant.io - A Beginner’s Guide to EIP-5725: Transferable Vesting NFTs.',
-			readMoreUrl: '	https://thedefiant.io/a-beginners-guide-to-eip-5725-transferable-vesting-nfts',
+			readMoreUrl: 'https://thedefiant.io/a-beginners-guide-to-eip-5725-transferable-vesting-nfts',
 			date: '14 April 2023'
 		},
 		{
@@ -34,7 +34,7 @@
 			title: 'A Beginner’s Guide to EIP-5725: Transferable Vesting NFTs',
 			newsOrg: 'Understanding the fundamentals of ERC-5725 and its impact on the NFT landscape.',
 			readMoreUrl:
-				'ethereumworldnews.com - A Beginner’s Guide to EIP-5725: Transferable Vesting NFTs',
+				'https://en.ethereumworldnews.com/a-beginners-guide-to-eip-5725-transferable-vesting-nfts/',
 			date: '14 April 2023'
 		}
 	];
@@ -137,11 +137,11 @@
 					class="flex gap-2 items-center justify-center mb-8 animate-fade-right animate-duration-[2345ms] animate-delay-[500ms]"
 				>
 					<p class="text-xl italic">"Tokens, but this time inside an NFT" - @CryptoNines</p>
-					<img
+					<!-- <img
 						src="{authors[0].imageUrl}"
 						alt={`Profile of ${authors[0].name}`}
 						class="w-12 h-12 rounded-full"
-					/>
+					/> -->
 				</div>
 
 				<div class="grid grid-cols-1 lg:grid-cols-3 gap-10 my-20 mx-20">

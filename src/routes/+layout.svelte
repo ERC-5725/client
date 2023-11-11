@@ -7,7 +7,7 @@
 	import { storePopup } from '@skeletonlabs/skeleton';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 
-	export const prerender = true;
+
 </script>
 
 <!-- App Shell -->
