@@ -18,25 +18,33 @@
 	// Create arrays of news articles and authors
 	export const newsArticles: NewsArticle[] = [
 		{
+			title: 'ApeSwap and Paladin Collaborate to Develop EIP-5725: Transferable Vesting NFTs',
+			newsOrg: 'bsc.news',
+			readMoreUrl:
+				'https://en.ethereumworldnews.com/a-beginners-guide-to-eip-5725-transferable-vesting-nfts/',
+			date: '19 April 2023'
+		},
+		{
 			title: "A Beginner's Guide to EIP-5725: Transferable Vesting NFTs",
-			newsOrg: 'thedefiant.io - A Beginner’s Guide to EIP-5725: Transferable Vesting NFTs.',
+			newsOrg: 'thedefiant.io',
 			readMoreUrl: 'https://thedefiant.io/a-beginners-guide-to-eip-5725-transferable-vesting-nfts',
 			date: '14 April 2023'
 		},
 		{
 			title: 'Understanding and Developing an ERC-5725 Contract',
-			newsOrg: 'coinmarketcap.com - Understanding and Developing an ERC-5725 Contract',
+			newsOrg: 'coinmarketcap.com',
 			readMoreUrl: 'https://coinmarketcap.com/community/articles/643ccc4432eff137ebb47477/',
 			date: '14 April 2023'
 		},
 
 		{
 			title: 'A Beginner’s Guide to EIP-5725: Transferable Vesting NFTs',
-			newsOrg: 'Understanding the fundamentals of ERC-5725 and its impact on the NFT landscape.',
+			newsOrg: 'ethereumworldnews.com',
 			readMoreUrl:
 				'https://en.ethereumworldnews.com/a-beginners-guide-to-eip-5725-transferable-vesting-nfts/',
 			date: '14 April 2023'
-		}
+		},
+
 	];
 
 	export const authors: Author[] = [
@@ -123,9 +131,13 @@
 
 <section>
 	<div class="flex items-center justify-center lg:h-screen">
-		<div class="grid grid-cols-1 md:grid-cols-3 text-center p-4 rounded-lg">
+		<div class="grid grid-cols-1 md:grid-cols-3 text-center p-4 rounded-lg gap-10">
 			<div class="col-span-1 animate-fade-left animate-duration-[2345ms]">
-				<img src="{base + '/'}eth-diamond-rainbow.svg" class="w-64 mx-auto" alt="ETH Logo" />
+				<img
+					src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Eth-diamond-rainbow.png"
+					class="w-64 mx-auto"
+					alt="ETH Logo"
+				/>
 			</div>
 
 			<div class="col-span-1 md:col-span-2 text-center justify-center">
@@ -143,7 +155,7 @@
 					/>
 				</div>
 
-				<div class="grid grid-cols-1 lg:grid-cols-3 gap-10 my-20 mx-20">
+				<div class="grid grid-cols-1 lg:grid-cols-3 py-12 mx-10 md:mx-20 lg:mx-40 gap-5">
 					<div
 						class="variant-glass-secondary shadow-lg rounded-lg p-8 tracking-widest text-center animate-fade-up animate-duration-[2345ms] animate-delay-[223ms]"
 					>
@@ -258,23 +270,23 @@
 	</div>
 </section>
 
-<section bind:this={newsSection} class="py-12 mx-10 md:mx-20 lg:mx-40 {newsAnimationClass}">
+<section bind:this={newsSection} class="py-12 mx-4 md:mx-20 lg:mx-40 {newsAnimationClass}">
 	<h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Latest ERC-5725 News</h2>
-	<div class="table-container flex items-center justify-center">
-		<table class="table table-hover">
+	<div class="overflow-x-auto">
+		<table class="table min-w-full table-auto table-hover">
 			<thead>
 				<tr>
-					<th>Title</th>
-					<th>News Organization</th>
-					<th>Date</th>
+					<th class="px-4 py-2">News Organization</th>
+					<th class="px-4 py-2">Title</th>
+					<th class="px-4 py-2">Date</th>
 				</tr>
 			</thead>
 			<tbody>
 				{#each newsArticles as article}
 					<tr>
-						<td><a href={article.readMoreUrl}> {article.title}</a></td>
-						<td><a href={article.readMoreUrl}> {article.newsOrg}</a></td>
-						<td><a href={article.readMoreUrl}> {article.date}</a></td>
+						<td class="px-4 py-2"><a href={article.readMoreUrl}> {article.newsOrg}</a></td>
+						<td class="px-4 py-2"><a href={article.readMoreUrl}> {article.title}</a></td>
+						<td class="px-4 py-2"><a href={article.readMoreUrl}> {article.date}</a></td>
 					</tr>
 				{/each}
 			</tbody>
@@ -289,20 +301,26 @@
 <section bind:this={authorSection} class="py-12 mx-10 md:mx-20 lg:mx-40 {authorAnimationClass}">
 	<h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Authors</h2>
 	<div class="flex items-center justify-center space-x-20">
-		{#each authors as author}
-			<div class="flex flex-col items-center">
-				<img
-					src={author.imageUrl}
-					alt={`Profile of ${author.name}`}
-					class="w-24 h-24 rounded-full"
-				/>
-				<a href={author.twitterUrl} target="_blank" class="text-sm text-blue-500 hover:underline">
-					{author.name}
-				</a>
-				<a href={author.githubUrl} target="_blank" class="text-sm text-gray-500 hover:underline">
-					GitHub
-				</a>
-			</div>
-		{/each}
+		<div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-20">
+			{#each authors as author}
+				<div class="col-span-1 flex flex-col items-center justify-center p-4">
+					<img
+						src={author.imageUrl}
+						alt={`Profile of ${author.name}`}
+						class="w-24 h-24 rounded-full mb-3"
+					/>
+					<a
+						href={author.twitterUrl}
+						target="_blank"
+						class="text-sm text-blue-500 hover:underline mb-2"
+					>
+						{author.name}
+					</a>
+					<a href={author.githubUrl} target="_blank" class="text-sm text-gray-500 hover:underline">
+						GitHub
+					</a>
+				</div>
+			{/each}
+		</div>
 	</div>
 </section>
